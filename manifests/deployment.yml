@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pavanbarikapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pavanbarikapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: pavanbarikapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: pavanbarikapipelinesjavascriptdocker 
+          image: mycontainerregistry123456.azurecr.io/pavanbarikapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
